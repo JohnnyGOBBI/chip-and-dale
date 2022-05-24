@@ -2,26 +2,26 @@
 
 namespace App\Repository;
 
-use App\Entity\Name;
+use App\Entity\Squirrel;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Name>
+ * @extends ServiceEntityRepository<Squirrel>
  *
- * @method Name|null find($id, $lockMode = null, $lockVersion = null)
- * @method Name|null findOneBy(array $criteria, array $orderBy = null)
- * @method Name[]    findAll()
- * @method Name[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Squirrel|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Squirrel|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Squirrel[]    findAll()
+ * @method Squirrel[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class NameRepository extends ServiceEntityRepository
+class SquirrelRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Name::class);
+        parent::__construct($registry, Squirrel::class);
     }
 
-    public function add(Name $entity, bool $flush = false): void
+    public function add(Squirrel $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -30,7 +30,7 @@ class NameRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(Name $entity, bool $flush = false): void
+    public function remove(Squirrel $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
