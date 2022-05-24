@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\NameRepository;
+use App\Repository\SquirrelRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: NameRepository::class)]
-class Name
+#[ORM\Entity(repositoryClass: SquirrelRepository::class)]
+class Squirrel
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
